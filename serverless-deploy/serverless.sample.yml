@@ -1,0 +1,43 @@
+service:
+  name: lottery-bot-add-in
+provider:
+  stage: ${opt:stage, 'prod'}
+  name: aws
+  runtime: nodejs12.x
+  region: us-east-1
+  memorySize: 256
+  environment: ${file(./env.yml)}
+  profile: default
+  excludeDevDependencies: true
+  # iamRoleStatements:
+  #   - Effect: Allow
+  #     Action:
+  #       - lambda:InvokeFunction
+  #     Resource: "*"
+  deploymentBucket:
+    tags:
+      department: dev
+      Owner: Your name
+      Stage: production
+      Environment: your-env-tag
+      Team: your-team
+      Name: lottery-bot-add-in
+package:
+  include:
+    - '*.json'
+    - '*.js'
+    - 'node_modules/**'
+functions:
+  trigger:
+    description: lottery-bot-add-in
+    handler: lambda.trigger
+    timeout: 900 # 15 miutes
+  app:
+    handler: lambda.app
+    timeout: 900 # 15 miutes
+    description: lottery-bot-add-in
+    events:
+      - http:
+          method: any
+          path: /{proxy+}
+          cors: false

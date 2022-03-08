@@ -1,0 +1,37 @@
+@require './basic'
+#bg
+  background #08c 50% 50% no-repeat url('https://raw.githubusercontent.com/ringcentral/poll-bot/master/imgs/rc-bg-min.png')
+  background-size cover
+.wrap
+  max-width 612px
+  margin 0 auto 0 20px
+  padding 20px
+  position relative
+  z-index 2
+  background #fff
+  min-height 100%
+  border-left 1px solid #eee
+  border-right 1px solid #eee
+
+#container
+#bg
+  position fixed
+  left 0
+  right 0
+  top 0
+  bottom 0
+  z-index 1
+#container
+  z-index 2
+  overflow scroll
+.header
+  .logout-tip
+    display none
+  &:hover .logout-tip
+    display inline-block
+.rc-choice
+  width 100%
+.link
+  color #08c
+  &:hover
+    color #333
