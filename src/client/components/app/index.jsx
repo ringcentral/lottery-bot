@@ -150,6 +150,14 @@ export default class View extends Component {
           </a>
           <a
             className='mg1l'
+            href='https://github.com/ringcentral/lottery-bot/blob/master/doc/command.md'
+            target='_blank'
+            rel='noreferrer'
+          >
+            <LinkOutlined /> Bot commands list
+          </a>
+          <a
+            className='mg1l'
             href='https://github.com/ringcentral/lottery-bot'
             target='_blank'
             rel='noreferrer'

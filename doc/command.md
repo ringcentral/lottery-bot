@@ -9,10 +9,6 @@ Basic command
 # {numberToPick} integer, required, how many winners to pick, at least 1, no more than team member's count
 # [id], optional, string, 7 < length < 20, random string only contains only A-Za-z0-9_-, when id set, all winners picked from same batch id, will not pick same member twice. If you wanted to pick winners many batches, and every person can win only once, you should set id.
 @LotteryBot {cmd} {numberToPick} [id="xxxxxxx"] [title]
-
-# clear lottery pick data with batch id
-@LotteryBot clear {batchId}
-# [batchId], string, required, batch id.
 ```
 
 Examples:
@@ -26,7 +22,4 @@ Examples:
 
 # with title and id
 @LotteryBot pick 3 id="asdasd234csd" lucky prize winners
-
-# clear lottery pick data with batch id=asdasd234csd
-@LotteryBot clear asdasd234csd
 ```

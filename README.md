@@ -3,13 +3,15 @@
 
 A Lottery picking bot for RingCentral app, created with [https://github.com/ringcentral/ringcentral-add-in-framework-js](https://github.com/ringcentral/ringcentral-add-in-framework-js), just randomly pick some team members as lottery winner!
 
+This is a bot version of Tyler Liu's [party-lottery](https://github.com/tylerlong/party-lottery) app.
+
 ## Screenshots
 
-todo
+![ ](imgs/ss.png)
 
 ## Videos
 
-todo
+[https://youtu.be/m0YD6eLQu2M](https://youtu.be/m0YD6eLQu2M)
 
 ## DEV Prerequisites
 
@@ -78,3 +80,7 @@ npm run deploy
 ## License
 
 MIT
+
+## RingCentral Labs
+
+RingCentral Labs is a program that lets RingCentral engineers, platform product managers and other employees share RingCentral apps they've created with the customer community. RingCentral Labs apps are free to use, but are not official products, and should be considered community projects - these apps are not officially tested or documented. For help on any RingCentral Labs app please consult each project's GitHub Issues message boards - RingCentral support is not available for these applications.
