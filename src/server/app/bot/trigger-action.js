@@ -28,7 +28,6 @@ async function getMembers (bot, groupId, botId) {
     .then(d => d.data)
   const url = '/restapi/v1.0/glip/persons'
   const batchSize = 30
-  console.log('members', r)
   return batchGet(
     bot,
     url,
@@ -138,7 +137,6 @@ export async function action (event) {
   const membersList = members && members.length
     ? members
     : await getMembers(bot, groupId, botId)
-  console.log('membersList', membersList)
   const {
     winners, allPicked
   } = await pickWinner(membersList, data, count, title)

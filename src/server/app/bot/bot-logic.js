@@ -94,7 +94,6 @@ export async function handleMessage (
   message
 ) {
   const conf = parseCommand(text)
-  console.log('conf', conf)
   if (conf && conf.error) {
     await sendMsg(bot, group, userId, conf.error)
   } else if (conf && conf.title) {

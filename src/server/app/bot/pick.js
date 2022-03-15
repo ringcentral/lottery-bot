@@ -3,7 +3,6 @@ import trigger from '../handlers/trigger'
 import uid from '../common/uid'
 
 export async function sendMsg (bot, group, userId, text) {
-  console.log('msg', text)
   await bot.sendMessage(group.id, {
     text: `![:Person](${userId}) ${text}`
   })
@@ -39,7 +38,6 @@ export async function pick (bot, group, userId, config) {
     })
   }
   const text = `Picking ${count} ${title}, please wait...`
-  console.log('fff', text)
   await sendMsg(
     bot,
     group,
