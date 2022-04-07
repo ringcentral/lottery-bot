@@ -1,6 +1,6 @@
 {
   "name": "lottery-bot",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Randomly pick some team members as lottery winner!",
   "main": "index.js",
   "keywords": [

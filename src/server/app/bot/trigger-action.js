@@ -35,7 +35,9 @@ async function getMembers (bot, groupId, botId) {
     batchSize
   ).then(r => {
     return r
-      .filter(d => d.id !== botId)
+      .filter(d => {
+        return d.id !== botId && !(d.email || '').includes('bot.glip.net')
+      })
       .map(d => {
         return _.pick(d, [
           'id', 'firstName', 'lastName', 'email'
